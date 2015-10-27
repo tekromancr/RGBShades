@@ -32,6 +32,11 @@ void fillAll(CRGB fillColor) {
   }
 }
 
+// set a column to a single color
+void fillCol(int col, CRGB color){
+  for(int i=0; i<kMatrixHeight; i++) leds[XY(col, i)] = color;
+}
+
 // Fade every LED in the array by a specified amount
 void fadeAll(byte fadeIncr) {
   for (byte i = 0; i < NUM_LEDS; i++) {

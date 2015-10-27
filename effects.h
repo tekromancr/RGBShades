@@ -313,3 +313,54 @@ void hearts() {
      FastLED.clear();
   y++;
 }
+static bool in = true;
+static int count = 15;
+void blinkLeft(){
+  CRGB color = CRGB::Red;
+  if (effectInit == false){
+    in=true;
+    count=0;
+    fillAll(CRGB::Black);
+    effectInit = true;
+    effectDelay = 30;
+  }
+
+  if(in){
+    fillCol(count, CRGB::Black);
+    count++;
+  }else{
+    fillCol(count, color);
+    count--;
+  }
+  if(count==8){
+    in = false;
+  }
+  if(count==0){
+    in = true;
+  }
+}
+
+void blinkRight(){
+  CRGB color = CRGB::Red;
+  if (effectInit == false){
+    in=true;
+    count=15;
+    fillAll(CRGB::Black);
+    effectInit = true;
+    effectDelay = 30;
+  }
+
+  if(in){
+    fillCol(count, CRGB::Black);
+    count--;
+  }else{
+    fillCol(count, color);
+    count++;
+  }
+  if(count==7){
+    in = false;
+  }
+  if(count==15){
+    in = true;
+  }
+}

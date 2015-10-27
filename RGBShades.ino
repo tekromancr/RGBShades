@@ -54,17 +54,20 @@ void setup() {
 }
 
 // list of functions that will be displayed
-functionList effectList[] = {threeSine,
-                             threeDee,
-                             plasma,
-                             confetti,
-                             rider,
-                             glitter,
-                             slantBars,
-                             colorFill,
-                             sideRain, 
-                             shadesOutline,
-                             hearts};
+functionList effectList[] = {//threeSine,
+                             //threeDee,
+                             //plasma,
+                             //confetti,
+                             //rider,
+                             //glitter,
+                             //slantBars,
+                             //colorFill,
+                             //sideRain, 
+                             //shadesOutline,
+                             //hearts,
+                             blinkLeft,
+                             blinkRight
+                          };
 
 // Timing parameters
 #define cycleTime 15000
